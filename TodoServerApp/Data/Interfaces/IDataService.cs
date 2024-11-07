@@ -2,6 +2,9 @@
 {
 	public interface IDataService
 	{
-		Task<IEnumerable<TaskItem>> GetTaskItemsAsync();
+		Task<IEnumerable<TaskItem>> GetAllAsync();
+		Task SaveAsync(TaskItem Item);
+		Task<TaskItem> GetTaskAsync(int id);
+		Task DeleteAsync(int id);
 	}
 }
